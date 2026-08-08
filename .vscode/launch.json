@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug TinyTransformer",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/out/build/windows-x64/TinyTransformer/Debug/TinyTransformer.exe",
+      "args": [],
+      "stopOnEntry": false,
+      "cwd": "${workspaceFolder}",
+      "env": {},
+      "console": "integratedTerminal",
+      "preLaunchTask": "cmake: build windows-x64-debug"
+    },
+    {
+      "name": "Debug TinyTransformer (CMake Tools)",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "args": [],
+      "stopOnEntry": false,
+      "cwd": "${command:cmake.launchTargetDirectory}",
+      "env": {},
+      "console": "integratedTerminal"
+    }
+  ]
+}

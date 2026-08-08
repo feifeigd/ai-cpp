@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "cmake: configure windows-x64",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--preset", "windows-x64"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "build",
+      "problemMatcher": ["$msCompile"]
+    },
+    {
+      "label": "cmake: build windows-x64-debug",
+      "type": "shell",
+      "command": "cmake",
+      "args": ["--build", "--preset", "windows-x64-debug"],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": ["cmake: configure windows-x64"],
+      "problemMatcher": ["$msCompile"]
+    }
+  ]
+}
