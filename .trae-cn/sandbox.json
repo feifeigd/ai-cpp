@@ -1,0 +1,13 @@
+{
+  "filesystem": {
+    "readWrite": [
+      "$WORKSPACE_FOLDER/.vscode"
+    ],
+    "readOnly": []
+  },
+  "network": {
+    "default": "allow",
+    "allow": [],
+    "deny": []
+  }
+}
